@@ -1,0 +1,14 @@
+
+ He: 8 
+ pointed: 1 
+ his: 7 
+ finger: 1 
+ in: 5 
+ friendly: 1 
+ jest: 1 
+ and: 9 
+ went: 2 
+ over: 5 
+ to: 11 
+ the: 17 
+

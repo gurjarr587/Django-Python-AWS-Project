@@ -1,0 +1,11 @@
+He,2
+pointed,7
+his,3
+finger,6
+in,2
+friendly,8
+jest,4
+and,3
+went,4
+over,4
+to,2
