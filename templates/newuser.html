@@ -1,0 +1,73 @@
+
+<h1>WELCOME TO UBCLASSROOM RESERVATION SYSTEM</h1>
+{% block head%}
+<title>UBCLASSROOM</title>
+{% endblock %}
+
+<style>
+
+body {
+    background-image: url("http://www.ubknights.com/sports/bsb/2014-15/photos/3_ub_sec_fc.jpg");
+    background-position:no-repeat;
+    background-size:full;
+}
+
+</style>
+{% block content %}
+    <div id="content-container" class="container p-none">
+        <div class="lgn-container col-lg-8">
+
+            <form id="login-form" method="post" action="\newuser">
+                {% csrf_token %}
+                <table class="table">
+                    <tr>
+                        <td><label for="id_admin">AdminId</label></td>
+                        <td><input id="id_admin" name="adminid"
+                                   type="number" class="form-control"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td><label for="id_username">Name/Username</label></td>
+                        <td><input id="id_username" name="username"
+                                   type="text" class="form-control"></td>
+                    </tr>
+
+                   <tr>
+                        <td><label for="id_lastname">Lastname</label></td>
+                        <td><input id="id_lastname" name="lastname"
+                                   type="text" class="form-control"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="id_password">Password</label></td>
+                        <td><input id="id_password" name="password"
+                                   type="password" class="form-control"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="id_gmail">E-mail</label></td>
+                        <td><input id="id_gmail" name="email"
+                                   type="text" class="form-control"></td>
+                    </tr>
+
+
+                </table>
+
+                 <input id="id_submit" type="submit" value="SubmitDetails"/>
+
+            </form>
+
+        </div>
+    </div>
+
+<table class="table">
+    <tr>
+<a id="login" class="btn btn-default" href="/index">Login</a>
+    </tr>
+</table>
+
+
+{% endblock content %}
+
+

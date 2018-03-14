@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+    </head>
+    <style>
+
+body {
+    background-image: url("http://www.ubknights.com/sports/bsb/2014-15/photos/3_ub_sec_fc.jpg");
+    background-position:no-repeat;
+    background-size:full;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+</style>
+
+    <body>
+
+    <h2>Menu</h2>
+
+    <div class="dropdown">
+        <button class="dropbtn">UB ClassRoom Tables</button>
+        <div class="dropdown-content">
+            <a href="/adminuserv">admin user</a>
+            <a href="/normaluser">normal user</a>
+            <a href="/messagev">message</a>
+            <a href="/buildinguserv">building admin</a>
+            <a href="/departmentv">department</a>
+            <a href="/roomv">room</a>
+            <a href="/roomt">room type</a>
+            <a href="/logout">logout</a>
+        </div>
+    </div>
+    </body>
+</html>

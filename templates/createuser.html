@@ -1,0 +1,33 @@
+
+<h1>WELCOME TO UBCLASSROOM RESERVATION SYSTEM</h1>
+{% block head%}
+<title>UBCLASSROOM</title>
+{% endblock %}
+
+<style>
+
+body {
+    background-image: url("https://i.ytimg.com/vi/LQXU4dOBPUk/maxresdefault.jpg");
+    background-position:no-repeat;
+    background-size:full;
+}
+
+</style>
+{% block content %}
+<div id="content-container" class="container p-none">
+    <div class="lgn-container col-lg-8">
+        <table class="table">
+    <tr>
+        <a id="id_createuser" class="btn btn-default" href="/newuser">Create User</a><br>
+    </tr>
+        </table>
+  <table class="table">
+    <tr>
+        <a id="login" class="btn btn-default" href="/index">Login</a>
+    </tr>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+

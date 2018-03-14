@@ -1,0 +1,24 @@
+runtime: python27
+env: standard
+entrypoint: gunicorn -b :$PORT MIAS.wsgi
+threadsafe: yes
+
+runtime_config:
+  python_version: 2
+
+manual_scaling:
+  instances: 1
+
+libraries:
+  - name: django
+    version: "1.9"
+  - name: MySQLdb
+    #version: 1.2.5
+    version: "latest"
+
+handlers:
+  - url: /.*
+    script: mysite.wsgi.application
+
+builtins:
+  - django_wsgi: on
