@@ -1,0 +1,35 @@
+
+<style>
+
+body {
+    background-image: url("http://www.ubknights.com/sports/bsb/2014-15/photos/3_ub_sec_fc.jpg");
+    background-position:no-repeat;
+    background-size:full;
+}
+
+</style>
+{% block content %}
+
+{% if result or result_n %}
+<h1>YOU ARE LOGGED IN UBCLASSROOM</h1>
+
+<label>USERNAME : {{result}}</label>
+<br>
+
+
+
+<table class="table">
+    <tr><br>
+<a id="query" class="btn btn-default" href="/query">Click Me For Main Page UB</a>
+    </tr>
+</table>
+
+
+    <form method="post" action="\logout">
+        {% csrf_token %}<br>
+            <input type="submit" value="LOGOUT"/>
+    </form>
+
+{% endif %}
+
+{% endblock content %}

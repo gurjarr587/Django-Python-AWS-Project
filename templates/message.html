@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+    </head>
+    <style>
+
+body {
+    background-image: url("http://www.ubknights.com/sports/bsb/2014-15/photos/3_ub_sec_fc.jpg");
+    background-position:no-repeat;
+    background-size:full;
+}
+
+</style>
+
+    <body>
+    {% block content%}
+    {% if x %}
+    {% for data in x %}
+    <h5>RESULT</h5>
+    <table class="table">
+
+        <tr>
+            <td><label>ENQUIRY : {{data.ENQUIRY}}<br/></label></td>
+            <td></td>
+            <td><label> FIRST NAME : {{data.COMPLAINT}}</label></td>
+            <td></td>
+            <td><label> LAST NAME : {{data.USER_ID}}</label></td>
+        </tr>
+    </table>
+    {% endfor %}
+    {% else %}
+    <form id="form1" name="form1" method="post" action="/messagev">
+        {% csrf_token %}
+        <input type="hidden" name="input" id="textfield" />
+        <textarea name="text" id="textarea" cols="45" rows="5"></textarea>
+        <input type="submit" name="button" id="button" value="TypeQuery" />
+    </form>
+    {% endif %}
+    {% endblock content%}
+
+
+
+    </body>
+</html>

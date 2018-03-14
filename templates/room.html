@@ -1,0 +1,30 @@
+
+<h1>WELCOME TO UBCLASSROOM RESERVATION SYSTEM</h1>
+{% block head%}
+<title>UBCLASSROOM</title>
+{% endblock %}
+{% block body%}
+{% if room_info %}
+    {% for data in room_info %}
+    <h5>RESULT</h5>
+    <table class="table">
+
+        <tr>
+            <td><label>ROOM ID : {{data.ROOM_ID}}<br/></label></td>
+            <td><label>USER ID : {{data.USER_ID}}<br/></label>></td>
+            <td><label>ROOM TYPE : {{data.ROOM_TYPE}}</label></td>
+            <td><label>BUILDING ID : {{data.B_ADMIN_ID}}</label></td>
+
+        </tr>
+    </table>
+    {% endfor %}
+    {% else %}
+    <form id="form1" name="form1" method="post" action="/roomv">
+        {% csrf_token %}
+        <input type="hidden" name="input" id="textfield" />
+        <textarea name="text" id="textarea" cols="45" rows="5"></textarea>
+        <input type="submit" name="button" id="button" value="TypeQuery" />
+    </form>
+    {% endif %}
+
+{% endblock %}
